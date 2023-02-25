@@ -1,0 +1,48 @@
+{
+  "name": "easynoteapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node-dev": "ts-node-dev",
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
+    "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./db/connect.ts",
+    "typeorm:generate-migration": "npm run typeorm -- -d ./db/connect.ts migration:generate ./migrations/$npm_config_name",
+    "typeorm:create-migration": "npm run typeorm -- migration:create ./migrations/$npm_config_name",
+    "typeorm:revert-migration": "npm run typeorm -- -d ./db/connect.ts migration:revert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/basic": "^7.0.1",
+    "@hapi/hapi": "^21.3.0",
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
+    "faker": "^6.6.6",
+    "hapi-auth-jwt2": "^10.4.0",
+    "hapi-cors": "^1.0.3",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.1.2",
+    "node-emoji": "^1.11.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.12"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/colors": "^1.2.1",
+    "@types/faker": "^6.6.9",
+    "@types/hapi": "^18.0.8",
+    "@types/hapi__basic": "^5.1.3",
+    "@types/hapi__joi": "^17.1.9",
+    "@types/hapi-auth-jwt2": "^8.6.1",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/node": "^18.14.0",
+    "@types/node-emoji": "^1.8.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
